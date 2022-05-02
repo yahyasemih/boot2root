@@ -229,16 +229,16 @@ We can explore the binary using GDB:
 
 After finishing all steps the password is the concatenation of every step without spaces: `Publicspeakingisveryeasy.126241207201b2149opekmq426135`
 
-# Exloit user thor with SSH
+# Exploit user thor with SSH
 
 Once connected we find instructions in a file named `turtle` that will give us password for user `zaz`.
 After following the instructions we found that it draws letter which are `SLASH`, at the end of the instructions we have a message
 `Can you digest the message? :)` which means that we have to apply `MD5` on that word. The password is `646da671ca01bb5d84dbb5fb2238dc8e`
 
-# Exloit user zaz sith SSH
+# Exploit user zaz sith SSH
 
 Once connected we find a folder named `mail` that contains empty folders and log messages with unreadable content, and a binary
-named `exloit_me`. When running the binary wihtout arguments is does nothing but if we give an argument it prints it back.
+named `exploit_me`. When running the binary wihtout arguments is does nothing but if we give an argument it prints it back.
 Giving more arguments does not change things
 
 First idea that cames in mind is to see if we can overflow the input, which happens when we give more than `139` characters. We can then
